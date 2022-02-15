@@ -1,0 +1,44 @@
+A organização ajuda a trabalhar em equipe e ainda por cima facil de aplicar manutenção futuramente
+
+Uma organização boa faz com que entregamos software de qualidade
+Ou seja:
+- Mais facil de utilizar;
+- Com funcionamento correto;
+- Facil manutenção;
+- Integridade dos dados;
+
+O que é Paradigmas de Programação?
+R.: Classificação de linguagens por suas caracteristicas
+(P.O.O., Funcional, são um dos exemplos).
+
+1 - Paradigma Declarativo: Declara o que deseja (resultado), mas se importar com os meios. Um exemplo: querer o resultado de uma soma, mas sem saber/importar como calcular
+    1.1. Funcional, lógica, Data-Driven (SQL)
+
+2 - Paradigma Imperativo: Declaramos exatamente o que deseja, cada passo necessário.
+    2.1. P.O.O., Procedural
+
+3 - Multiparadigma (PhP, Python, C++, Java)
+    Oonde qualquer paradigma pode ser aplicado na mesma linguagem 
+
+Nenhum paradigma é perfeito
+
+--- POO ---
+Ficou popular pela sua eficiencia, embora não seja facil de se aprender e suporta em varias linguagens 
+
+Originou-se nos anos 1960 (1962 - 1968) por Kristen Nygaard e Ole-Johan Dahl na Noruega
+
+Busca abtrair objetos ou fatos reais onde atributos representam suas caracteristicas e métodos que represetam seu comportamento 
+
+
+--- UML ---
+
+Unified Modeling Language (Linguagem de modelagem de desenvolvimento). Maneira de visualizar o código de forma abstrata
+Em paralelo com arquitetur e engenharia, seria como a planta de uma construção
+O que pode ser abstrato:
+- Atividade;
+- Componentes e como eles interagem como sistema;
+- Como ele funcionará;
+- Entidades interagem com o Sistema;
+- Interface de usuário (como o usuário interage com o sistema NÃO COM A TELA VISUAL);
+
+Um jeito de mal uso do UML é projetar todo o sistema com ele ou até mesmo assumir que novatos possam projetar com UML
