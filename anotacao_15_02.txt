@@ -42,3 +42,36 @@ O que pode ser abstrato:
 - Interface de usuário (como o usuário interage com o sistema NÃO COM A TELA VISUAL);
 
 Um jeito de mal uso do UML é projetar todo o sistema com ele ou até mesmo assumir que novatos possam projetar com UML
+
+Existe dois tipos de diagramas:
+1 - Estruturais: estrutura estatica do sistema
+2 - Comportamentais: Comportamento dinamico do sistema
+
+
+Diagrama de classe:
+1- Principais Componentes orientada a objetos
+2- descreve os dados (atributos e métodos da classe)
+
+Atributos no UML:
+ + Public
+ - Private
+ # Protected
+ ~ Package
+________ (sublinhado) método estatico
+
+ metodos static funcionam sem precisar estancia a classe
+ Para rodar um metodo statico se usa "NomeDaClasse::Metodo()"
+
+ Seta com Triangulo fechado = Herança
+ Exemplo:
+
+ Classe  A ______|> Classe B
+ ou seja Classe A herda tudo da classe B
+
+ Seta com traço pontilhado ou reta com bolinha = Implementação
+ Classe A - - - - - - |> B
+ Classe A _____________º B
+ Ou seja A implementa a Interface B
+
+ A interface é como um "contrato" ou seja, tudo que o A tiver, obrigatóriamente tem que ter o que B tiver
+ 
