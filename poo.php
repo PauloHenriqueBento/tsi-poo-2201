@@ -3,6 +3,7 @@
 interface User
 {
     public function seLogar();
+    public function apagar();
 }
 
 class Usuario implements User
@@ -16,6 +17,9 @@ class Usuario implements User
         echo "Logado :D";
     }
 
+    public function apagar(){
+
+    }
     public function seDeslogar()
     {
         echo "See ya";
@@ -38,6 +42,16 @@ class Professor extends Usuario
 
 }
 
+class Turma {
+
+    private $professor;
+
+    public function setProfessor(Professor $prof) {
+
+        $this->professor = $prof;
+    }
+}
+
 $Paulo = new Professor;
 $Paulo->seDeslogar();
 
@@ -51,3 +65,7 @@ $Paulo->seDeslogar();
 //echo $Paulo->getNome();
 
 //Usuario::seLogar();
+
+
+$turma = new Turma;
+$turma->setProfessor($Paulo);
