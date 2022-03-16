@@ -4,11 +4,22 @@ require_once '../interface/interfaceCrud.php';
 require_once '../interface/interfaceUsuario.php';
 
 class Usuario implements interfaceCrud, interfaceUsuario{
-    protected $id;
-    protected $nome;
-    protected $email;
-    protected $senha;
-    protected $id_perfil;
+    private $id;
+    private $nome;
+    private $email;
+    private $senha;
+    private $id_perfil;
+
+
+    public function __construct()
+    {
+        echo "Construtor da classe Usuário";
+    }
+    
+    protected function xpto()
+    {
+        echo "\nMétodo XPTO\n";
+    }
 
     public function criar(array $dados):bool
     {
@@ -34,9 +45,9 @@ class Usuario implements interfaceCrud, interfaceUsuario{
         return [];
     }
 
-    public function acao(array $listaProdutos):bool
+    public function acao(array $idProduto):bool
     {
-        echo "\nlistado produtos\n";
+        echo "\nacao genérica para usuário\n";
         return true;
     }
 }

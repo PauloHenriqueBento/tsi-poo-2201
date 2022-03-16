@@ -5,11 +5,19 @@ require_once '../interface/interfaceCrud.php';
 class Estoque implements interfaceCrud
 {
 
-    protected $id;
-    protected $id_produto;
-    protected $qtd;
-    protected $local;
-    protected $limite_min;
+    private $id;
+    private $id_produto;
+    private $qtd;
+    private $local;
+    private $limite_min;
+    private $produto;
+
+    public function __construct(Produto $objProd = null)
+    {
+        if(is_object($objProd)){
+            $this->produto = $objProd;
+        }
+    }
 
 
     public function criar(array $dados):bool
