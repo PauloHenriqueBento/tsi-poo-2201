@@ -1,13 +1,18 @@
 <?php
 require_once __DIR__ . '/Model.class.php';
+require_once __DIR__ . '/Investimento.class.php';
 
 class Cliente extends Model {
+
+    private Investimento $investimento;
 
     public function __construct()
     {
         parent::__construct();
 
         $this->tabela = 'clientes';
+
+        $this->investimento = new Investimento;
     }
 
     function inserir(array $dados):?int
@@ -74,9 +79,9 @@ class Cliente extends Model {
 
         return $lista;
     }
-}
 
-$client = new Cliente;
-var_dump ($client->listar());
- //var_dump($client->inserir(['nome'=> 'Oscar',
- //                            'telefone'=> 123456789]));
+    function carteira (int $id_cliente):array
+    {
+        return $this->investimento->cliente($id_cliente);
+    }
+}

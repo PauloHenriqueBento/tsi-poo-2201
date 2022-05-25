@@ -95,6 +95,27 @@ class Investimento extends Model {
 
         return $lista;
     }
+
+    function cliente(int $id_cliente):?array
+    {
+        $stmt = $this->prepare("SELECT 
+                                    id, qtd, id_ativo, id_cliente
+                                FROM 
+                                    {$this->tabela}
+                                WHERE
+                                    id_cliente = :id");
+        $stmt->bindParam(':id', $id_cliente);
+        
+        $stmt->execute();
+
+        $lista = [];
+
+        while($registro = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $lista[] = $registro;
+        }
+
+        return $lista;
+    }
 }
 
 $invest = new Investimento;

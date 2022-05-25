@@ -2,12 +2,10 @@
 
 
 require_once '../Models/Cliente.class.php';
-require_once '../Models/INvestimento.class.php';
 
 class Main {
 
     private Cliente $cliente;
-    private Investimento $investimento;
 
     public function __construct(){
 
@@ -21,7 +19,7 @@ class Main {
         $clientes = $this->cliente->listar();
 
         foreach($clientes as $ind => $cliente){
-            $carteira = $this->investimento->carteiraCliente($cliente['id']);
+            $carteira = $this->cliente->carteira($cliente['id']);
 
             $totalAtivo = 0;
     
